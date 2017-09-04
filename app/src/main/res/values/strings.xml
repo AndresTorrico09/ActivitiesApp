@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ActivitiesApp</string>
+    <string name="nombre">Nombre Completo: </string>
+    <string name="telefono">Teléfono: </string>
+    <string name="email">Email: </string>
+    <string name="descripcion">Descripción contacto: </string>
+    <string name="fecha">Fecha: </string>
+    <string name="btnSiguiente">Siguiente</string>
+    <string name="confirmarTitulo">Confirmar Datos</string>
+    <string name="btnEditar">Editar Datos</string>
+
+</resources>

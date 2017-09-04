@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="confirmarTitle">20sp</dimen>
+    <dimen name="margenDebajo">5dp</dimen>
+    <dimen name="margenDerecha">3dp</dimen>
+
+</resources>
