@@ -15,13 +15,15 @@ public class ConfirmarDatosActivity extends AppCompatActivity {
 
     TextView tvNombre,tvFecha,tvTelefono,tvEmail,tvDescripcion;
     Button btnEditar;
-    String s;
+    EditText eNombre, eTelefono, eFecha, eEmail, eDescripcion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirmar_datos);
         btnEditar = (Button) findViewById(R.id.btnEditar);
+
+        //Obtengo los extras del activity anterior
         Bundle extras = getIntent().getExtras();
 
         tvNombre = (TextView) findViewById(R.id.tvNombre);
@@ -30,7 +32,7 @@ public class ConfirmarDatosActivity extends AppCompatActivity {
         tvEmail = (TextView) findViewById(R.id.tvEmail);
         tvDescripcion = (TextView) findViewById(R.id.tvDescripcion);
 
-        //Seteo de valores en los camops del activity
+        //Seteo de valores en los campos del activity
         tvNombre.setText(extras.getString("NOMBRE"));
         tvFecha.setText(extras.getString("FECHA"));
         tvTelefono.setText(extras.getString("TELEFONO"));
@@ -41,12 +43,13 @@ public class ConfirmarDatosActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(ConfirmarDatosActivity.this, MainActivity.class);
-                /*i.putExtra("NOMBRE", eNombre.getText().toString());
-                i.putExtra("FECHA", eFecha.getText());
-                i.putExtra("TELEFONO", eTelefono.getText());
-                i.putExtra("EMAIL", eEmail.getText());
-                i.putExtra("DESCRIPCION", eDescripcion.getText());*/
+                i.putExtra("NOMBRE", tvNombre.getText().toString());
+                i.putExtra("FECHA", tvFecha.getText());
+                i.putExtra("TELEFONO", tvTelefono.getText());
+                i.putExtra("EMAIL", tvEmail.getText());
+                i.putExtra("DESCRIPCION", tvDescripcion.getText());
                 startActivity(i);
+                finish();
             }
         });
     }

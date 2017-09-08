@@ -30,7 +30,7 @@
             android:layout_marginRight="@dimen/margenDerecha"/>
         <TextView
             android:id="@+id/tvNombre"
-            android:layout_width="50sp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/colorAccent"/>
     </LinearLayout>
